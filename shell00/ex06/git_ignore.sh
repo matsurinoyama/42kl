@@ -1,1 +1,1 @@
-git status --ignored -s | tr -d '!!'
+git check-ignore *
