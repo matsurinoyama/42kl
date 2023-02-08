@@ -2,5 +2,5 @@
 - Current status: **PISCINE ONGOING**
 - Currently working on: `shell00`
 
-It is currently **Day 02**. Things to note/on my mind:
+It is currently **Day 03**. Things to note/on my mind:
 - ...
