@@ -1,6 +1,6 @@
 ## 42KL Research & Working Files
 - Current status: **PISCINE ONGOING**
-- Currently working on: `shell00`
+- Currently working on: `c00`
 
-It is currently **Day 03**. Things to note/on my mind:
+It is currently **Day 04**. Things to note/on my mind:
 - ...
