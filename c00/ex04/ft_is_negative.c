@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbin-fad <mbin-fad@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/09 16:36:14 by mbin-fad          #+#    #+#             */
-/*   Updated: 2023/02/09 19:45:46 by mbin-fad         ###   ########.fr       */
+/*   Created: 2023/02/09 19:12:34 by mbin-fad          #+#    #+#             */
+/*   Updated: 2023/02/09 19:22:40 by mbin-fad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_print_alphabet(void)
+void ft_is_negative(int n)
 {
-	char c = '`';
-	while (++c <= 'z')
-		write(1, &c, 1);
-}
-
-int main(void)
-{
-	ft_print_alphabet();
-	write(1, "\n", 1);
+	if (n < 0)
+		write(1, "N", 1);
+	else
+		write(1, "P", 1);
 }

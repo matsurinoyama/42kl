@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbin-fad <mbin-fad@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/09 16:36:14 by mbin-fad          #+#    #+#             */
-/*   Updated: 2023/02/09 19:45:46 by mbin-fad         ###   ########.fr       */
+/*   Created: 2023/02/09 19:24:01 by mbin-fad          #+#    #+#             */
+/*   Updated: 2023/02/09 20:20:53 by mbin-fad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_print_alphabet(void)
+void ft_print_comb(void);
 {
-	char c = '`';
-	while (++c <= 'z')
-		write(1, &c, 1);
-}
+	char v[5];
 
-int main(void)
-{
-	ft_print_alphabet();
-	write(1, "\n", 1);
-}
+	v[0] = '0';
+	v[3] = ',';
+	v[5] = ' ';
+
