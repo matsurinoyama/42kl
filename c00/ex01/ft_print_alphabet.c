@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbin-fad <mbin-fad@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/09 16:36:14 by mbin-fad          #+#    #+#             */
-/*   Updated: 2023/02/10 18:48:26 by mbin-fad         ###   ########.fr       */
+/*   Created: 2023/02/10 19:22:16 by mbin-fad          #+#    #+#             */
+/*   Updated: 2023/02/10 19:58:42 by mbin-fad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,9 @@ void	ft_putchar(char c)
 
 void	ft_print_alphabet(void)
 {
-	c = '`';
+	char	c = '`';
+	
 	while (c++ < 'z')
 		ft_putchar(c);
+		ft_putchar('\n');
 }
-
-int	main(void)
-	ft_print_alphabet();

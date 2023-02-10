@@ -6,16 +6,27 @@
 /*   By: mbin-fad <mbin-fad@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 19:12:34 by mbin-fad          #+#    #+#             */
-/*   Updated: 2023/02/10 18:24:59 by mbin-fad         ###   ########.fr       */
+/*   Updated: 2023/02/10 20:10:28 by mbin-fad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
+void ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
 void	ft_is_negative(int n)
 {
 	if (n < 0)
-		write(1, "N", 1);
+	{
+		ft_putchar('N');
+		ft_putchar('\n');
+	}
 	else
-		write(1, "P", 1);
+	{
+		ft_putchar('P');
+		ft_putchar('\n');
+	}
 }
