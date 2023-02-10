@@ -6,17 +6,44 @@
 /*   By: mbin-fad <mbin-fad@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 19:24:01 by mbin-fad          #+#    #+#             */
-/*   Updated: 2023/02/09 20:20:53 by mbin-fad         ###   ########.fr       */
+/*   Updated: 2023/02/10 18:41:49 by mbin-fad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_print_comb(void);
+void	ft_putchar(char a[])
 {
-	char v[5];
+	if (a[0] == '7' && a[1] == '8' && a[2] == '9') 
+	{
+		write(1, a, 3);
+		write(1, ".\n", 2);
+	}
+	else
+		write(1, a, 5);
+}
 
-	v[0] = '0';
-	v[3] = ',';
-	v[5] = ' ';
+void	ft_print_comb(void)
+{
+	char	a[5];
+	
+	a[0] = '0';
+	a[3] = ',';
+	a[4] = ' ';
 
+	while (a[0] <= '7')
+	{
+		a[1] = a[0] + 1;
+		while (a[1] <= '8')
+		{
+			a[2] = a[1] + 1;
+			while (a[2] <= '9')
+			{
+				ft_putchar(a);
+				a[2]++;
+			}
+			a[1]++;
+		}
+		a[0]++;
+	}
+}

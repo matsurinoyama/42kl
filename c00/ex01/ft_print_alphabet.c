@@ -6,21 +6,23 @@
 /*   By: mbin-fad <mbin-fad@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 16:36:14 by mbin-fad          #+#    #+#             */
-/*   Updated: 2023/02/09 19:45:46 by mbin-fad         ###   ########.fr       */
+/*   Updated: 2023/02/10 18:48:26 by mbin-fad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_print_alphabet(void)
+void	ft_putchar(char c)
 {
-	char c = '`';
-	while (++c <= 'z')
-		write(1, &c, 1);
+	write(1, &c, 1);
 }
 
-int main(void)
+void	ft_print_alphabet(void)
 {
-	ft_print_alphabet();
-	write(1, "\n", 1);
+	c = '`';
+	while (c++ < 'z')
+		ft_putchar(c);
 }
+
+int	main(void)
+	ft_print_alphabet();

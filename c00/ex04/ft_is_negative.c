@@ -6,13 +6,13 @@
 /*   By: mbin-fad <mbin-fad@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 19:12:34 by mbin-fad          #+#    #+#             */
-/*   Updated: 2023/02/09 19:22:40 by mbin-fad         ###   ########.fr       */
+/*   Updated: 2023/02/10 18:24:59 by mbin-fad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_is_negative(int n)
+void	ft_is_negative(int n)
 {
 	if (n < 0)
 		write(1, "N", 1);
