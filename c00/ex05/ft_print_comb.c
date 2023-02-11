@@ -14,10 +14,10 @@
 
 void	ft_putchar(char a[])
 {
-	if (a[0] == '7' && a[1] == '8' && a[2] == '9') 
+	if (a[0] == '7' && a[1] == '8' && a[2] == '9')
 	{
 		write(1, a, 3);
-		write(1, ".\n", 2);
+		write(1, "\n", 1);
 	}
 	else
 		write(1, a, 5);
@@ -26,11 +26,10 @@ void	ft_putchar(char a[])
 void	ft_print_comb(void)
 {
 	char	a[5];
-	
+
 	a[0] = '0';
 	a[3] = ',';
 	a[4] = ' ';
-
 	while (a[0] <= '7')
 	{
 		a[1] = a[0] + 1;
