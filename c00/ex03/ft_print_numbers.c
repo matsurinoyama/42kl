@@ -6,7 +6,7 @@
 /*   By: mbin-fad <mbin-fad@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 18:03:19 by mbin-fad          #+#    #+#             */
-/*   Updated: 2023/02/10 20:02:50 by mbin-fad         ###   ########.fr       */
+/*   Updated: 2023/02/14 16:29:31 by mbin-fad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,4 @@ void	ft_print_numbers(void)
 	n = '/';
 	while (n++ < '9')
 		ft_putchar(n);
-	ft_putchar('\n');
 }

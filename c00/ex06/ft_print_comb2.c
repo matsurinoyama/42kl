@@ -6,7 +6,7 @@
 /*   By: mbin-fad <mbin-fad@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 11:39:15 by mbin-fad          #+#    #+#             */
-/*   Updated: 2023/02/13 11:39:26 by mbin-fad         ###   ########.fr       */
+/*   Updated: 2023/02/14 17:08:52 by mbin-fad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	ft_putchar(char a[])
 	if (a[0] == '9' && a[1] == '8' && a[3] == '9' && a[4] == '9')
 	{
 		write(1, a, 5);
-		write(1, "\n", 1);
 	}
 	else
 		write(1, a, 7);
@@ -27,8 +26,8 @@ void	ft_print_comb2(void)
 {
 	char	a[7];
 
-	a[0], a[1], a[3], a[4] = '0';
-	a[2], a[6] = ' ';
+	a[0,1,3,4] = '0';
+	a[2,6] = ' ';
 	a[5] = ',';
 	while (a[0] <= '9')
 	{
@@ -47,4 +46,9 @@ void	ft_print_comb2(void)
 		}
 		a[0]++;
 	}
+}
+
+int	main(void)
+{
+	ft_print_comb2();
 }
