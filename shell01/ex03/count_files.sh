@@ -1,1 +1,1 @@
-ls -aR -print | awk 'END { print NR }'
+find . | awk 'END { print NR }'
