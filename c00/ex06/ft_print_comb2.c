@@ -6,7 +6,7 @@
 /*   By: mbin-fad <mbin-fad@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 11:39:15 by mbin-fad          #+#    #+#             */
-/*   Updated: 2023/02/14 20:00:08 by mbin-fad         ###   ########.fr       */
+/*   Updated: 2023/02/14 20:10:21 by mbin-fad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_putchar(char a[])
 {
+	a[2] = ' ';
+	a[5] = ',';
+	a[6] = ' ';
 	if (a[3] == '0' && a[4] == '0')
 	{
 		return ;
@@ -31,7 +34,9 @@ void	ft_putchar(char a[])
 		write(1, a, 5);
 	}
 	else
+	{
 		write(1, a, 7);
+	}
 }
 
 void	ft_print_comb2(void)
@@ -39,9 +44,6 @@ void	ft_print_comb2(void)
 	char	a[7];
 
 	a[0] = '0';
-	a[2] = ' ';
-	a[5] = ',';
-	a[6] = ' ';
 	while (a[0] <= '9')
 	{
 		a[1] = '0';
@@ -62,9 +64,4 @@ void	ft_print_comb2(void)
 		}
 		a[0]++;
 	}
-}
-
-int	main(void)
-{
-	ft_print_comb2();
 }
