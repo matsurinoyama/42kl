@@ -6,7 +6,7 @@
 /*   By: mbin-fad <mbin-fad@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 11:39:49 by mbin-fad          #+#    #+#             */
-/*   Updated: 2023/02/13 11:40:49 by mbin-fad         ###   ########.fr       */
+/*   Updated: 2023/02/14 20:34:56 by mbin-fad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,11 @@ void	ft_putchar(char c)
 
 void	ft_putnbr(int nb)
 {
+	if (nb == -2147483648)
+	{
+		write(1, "-2147483648", 11);
+		return ;
+	}
 	if (nb < 0)
 	{
 		ft_putchar('-');
