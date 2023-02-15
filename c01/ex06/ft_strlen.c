@@ -24,3 +24,20 @@ int	ft_strlen(char *str)
 	}
 	return (size);
 }
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[])
+{
+	if (argc != 2)
+	{
+		fprintf (stderr, 
+		"Error! Please input a random string in quotes after ./a.out.\n");
+		exit (1);
+	}
+
+	printf("CHARACTER COUNT: %d\n", ft_strlen(argv[1]));
+}
+*/

@@ -21,3 +21,20 @@ void	ft_putstr(char *str)
 	}
 	write(1, "\n", 1);
 }
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[])
+{
+	if (argc != 2)
+	{
+		fprintf (stderr, 
+		"Error! Please input a random string in quotes after ./a.out.\n");
+		exit (1);
+	}
+	
+	ft_putstr(argv[1]);
+}
+*/

@@ -20,3 +20,30 @@ void	ft_swap(int *a, int *b)
 	*a = *b;
 	*b = swap;
 }
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+	int	a;
+	int	b;
+	int	*ptra;
+	int	*ptrb;
+
+	if (argc != 3)
+	{
+		fprintf (stderr, 
+		"Error! Please input two random numbers after ./a.out.\n");
+		exit (1);
+	}
+
+	a = atoi (argv[1]);
+	b = atoi (argv[2]);
+	ptra = &a;
+	ptrb = &b;
+	ft_swap(ptra, ptrb);
+	printf("A = %d, B = %d\n", a, b);
+}
+*/

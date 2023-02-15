@@ -31,3 +31,44 @@ void	ft_rev_int_tab(int *tab, int size)
 	while (swaps--)
 		ft_swap(&tab[i++], &tab[--size]);
 }
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[])
+{
+	int	v[10];
+	int nmax;
+
+	if (argc != 2)
+	{
+		fprintf (stderr, 
+		"Error! Please input one random number after ./a.out.\n");
+		exit (1);
+	}
+
+	nmax = atoi(argv[1]);
+
+	for (int i=0; i<10; ++i)
+	{
+		v[i] = rand()%(nmax + 1);	
+	}
+	printf("BEFORE:\n");
+	for (int i=0; i<10; i++)
+	{
+		printf("%d ", v[i]);
+	}
+	printf("\n");
+		
+	ft_rev_int_tab(v, sizeof(v)/sizeof(v[0]));
+
+	printf("\nAFTER:\n");
+	for (int i=0; i<10; i++)
+	{
+		printf("%d ", v[i]);
+	}
+	printf("\n");
+	
+}
+*/
