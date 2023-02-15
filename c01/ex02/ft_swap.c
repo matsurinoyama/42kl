@@ -35,7 +35,7 @@ int main(void)
 	if (argc != 3)
 	{
 		fprintf (stderr, 
-		"Error! Please input two random numbers after ./a.out.\n");
+		"Error! Please input two numbers after ./a.out.\n");
 		exit (1);
 	}
 

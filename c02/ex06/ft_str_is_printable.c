@@ -1,6 +1,6 @@
 #include <unistd.h>
 
-int	ft_str_is_alpha(char *str)
+int	ft_str_is_printable(char *str)
 {
 	int	i;
 
@@ -9,12 +9,9 @@ int	ft_str_is_alpha(char *str)
 	{
 		if (str[i] != ' ')
 		{
-			if (str[i] < 'A' || str[i] > 'Z')
+			if (str[i] < '!' || str[i] > '~')
 			{
-				if (str[i] < 'a' || str[i] > 'z')
-				{
-					return (0);
-				}
+				return (0);
 			}
 		}
 		i++;
@@ -39,14 +36,14 @@ int	main(int argc, char *argv[])
 	printf("%s\n", argv[1]);
 	printf("\n");
 
-	printf("ALL ALPHABETICAL?:\n");
-	if (ft_str_is_alpha(argv[1]) == 1)
+	printf("ALL PRINTABLE CHARACTERS?:\n");
+	if (ft_str_is_printable(argv[1]) == 1)
 	{
-		printf("YES (%d)\n", ft_str_is_alpha(argv[1]));
+		printf("YES (%d)\n", ft_str_is_printable(argv[1]));
 	}
 	else
 	{
-		printf("NO (%d)\n", ft_str_is_alpha(argv[1]));
+		printf("NO (%d)\n", ft_str_is_printable(argv[1]));
 	}
 }
 */
