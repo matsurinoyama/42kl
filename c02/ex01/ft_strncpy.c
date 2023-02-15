@@ -1,11 +1,11 @@
 #include <unistd.h>
 
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strncpy(char *dest, char *src, int n)
 {
 	int	i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (src[i] != '\0' && i < n)
 	{
 		dest[i] = src[i];
 		i++;
@@ -20,10 +20,10 @@ char	*ft_strcpy(char *dest, char *src)
 
 int	main(int argc, char *argv[])
 {
-	if (argc != 3)
+	if (argc != 4)
 	{
 		fprintf (stderr, 
-		"Error! Please input two random strings in quotes after ./a.out.\n");
+		"Error! Please input two strings in quotes and one number after ./a.out.\n");
 		exit (1);
 	}
 
@@ -32,6 +32,6 @@ int	main(int argc, char *argv[])
 	printf("\n");
 
 	printf("AFTER:\n");
-	printf("%s\n", ft_strcpy(argv[2], argv[1]));	
+	printf("%s\n", ft_strncpy(argv[2], argv[1], atoi (argv[3])));	
 }
 */

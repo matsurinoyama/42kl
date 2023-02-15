@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 	if (argc != 2)
 	{
 		fprintf (stderr, 
-		"Error! Please input a random string in quotes after ./a.out.\n");
+		"Error! Please input a string in quotes after ./a.out.\n");
 		exit (1);
 	}
 	
