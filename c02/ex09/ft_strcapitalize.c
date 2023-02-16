@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mbin-fad <mbin-fad@student.42kl.edu.my>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/16 13:52:50 by mbin-fad          #+#    #+#             */
+/*   Updated: 2023/02/16 13:54:49 by mbin-fad         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
 char	*ft_strcapitalize(char *str)
@@ -17,7 +29,7 @@ char	*ft_strcapitalize(char *str)
 	return (str);
 }
 
-
+/*
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -37,3 +49,4 @@ int	main(int argc, char *argv[])
 	printf("AFTER:\n");
 	printf("%s\n", ft_strcapitalize(argv[1]));
 }
+*/
