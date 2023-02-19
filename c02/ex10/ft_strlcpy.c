@@ -1,44 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbin-fad <mbin-fad@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/16 13:52:50 by mbin-fad          #+#    #+#             */
-/*   Updated: 2023/02/16 15:30:07 by mbin-fad         ###   ########.fr       */
+/*   Created: 2023/02/16 13:49:56 by mbin-fad          #+#    #+#             */
+/*   Updated: 2023/02/16 13:49:59 by mbin-fad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-char	*ft_strcapitalize(char *str)
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	int	i;
+	unsigned int	i;
+	unsigned int	result;
 
 	i = 0;
-	while (str[i] != '\0')
+	result = 0;
+	while (src[result])
 	{
-		if ((i == 0 && str[i] != ' ') || (str[i] != ' ' && str[i - 1] == ' '
-				|| (str[i] != ' ' && str[i - 1] == '-')
-				|| (str[i] != ' ' && str[i - 1] == '+')))
-		{
-			if (str[i] >= 'a' && str[i] <= 'z')
-			{
-				str[i] = (str[i] - 32);
-			}
-		}
-		else
-		{
-			if (str[i] >= 'A' && str[i] <= 'Z')
-			{
-				str[i] = (str[i] + 32);
-			}
-		}
+		result++;
+	}
+	if (size == 0)
+	{
+		return (result);
+	}
+	while (src[i] && i < size)
+	{
+		dest[i] = src[i];
 		i++;
 	}
-	str[i] = '\0';
-	return (str);
+	dest[i] = '\0';
+	return (result);
 }
 
 /*
@@ -47,18 +42,19 @@ char	*ft_strcapitalize(char *str)
 
 int	main(int argc, char *argv[])
 {
-	if (argc != 2)
+	if (argc != 4)
 	{
 		fprintf (stderr, 
-		"Error! Please input a string in quotes after ./a.out.\n");
+		"Error! Please input two strings in quotes and one number after ./a.out.\n");
 		exit (1);
 	}
 
 	printf("BEFORE:\n");
-	printf("%s\n", argv[1]);
+	printf("%s\n", argv[2]);
 	printf("\n");
 
 	printf("AFTER:\n");
-	printf("%s\n", ft_strcapitalize(argv[1]));
+	printf("(%d) ", ft_strlcpy(argv[2], argv[1], atoi (argv[3])));
+	printf("%s\n", argv[2]);	
 }
 */
