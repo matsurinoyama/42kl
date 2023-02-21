@@ -49,8 +49,7 @@ int	main(int argc, char *argv[])
 {
 	if (argc != 2)
 	{
-		fprintf (stderr, 
-		"Error! Please input a string in quotes after ./a.out.\n");
+		fprintf(stderr, "Usage: %s <String>\n", argv[0]);
 		exit (1);
 	}
 

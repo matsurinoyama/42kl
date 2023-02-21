@@ -34,16 +34,15 @@ int	main(int argc, char *argv[])
 {
 	if (argc != 3)
 	{
-		fprintf (stderr, 
-		"Error! Please input two strings in quotes after ./a.out.\n");
+		fprintf(stderr, "Usage: %s <Dest. String> <Src. String>\n", argv[0]);
 		exit (1);
 	}
 
 	printf("BEFORE:\n");
-	printf("%s\n", argv[2]);
+	printf("%s\n", argv[1]);
 	printf("\n");
 
 	printf("AFTER:\n");
-	printf("%s\n", ft_strcpy(argv[2], argv[1]));	
+	printf("%s\n", ft_strcpy(argv[1], argv[2]));	
 }
 */
