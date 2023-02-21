@@ -1,48 +1,74 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbin-fad <mbin-fad@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/21 14:51:42 by mbin-fad          #+#    #+#             */
-/*   Updated: 2023/02/21 16:31:14 by mbin-fad         ###   ########.fr       */
+/*   Created: 2023/02/21 17:01:37 by mbin-fad          #+#    #+#             */
+/*   Updated: 2023/02/21 17:01:39 by mbin-fad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-char	*ft_strncat(char *dest, char *src, unsigned int nb)
+char	*ft_strstr(char *str, char *to_find)
 {
 	int	i;
 	int	j;
+	int l;
+	int	scan;
+	int count;
+	int	print;
 
 	i = 0;
 	j = 0;
-	while (dest[i] != '\0')
+	l = 0;
+	while (to_find[i] != '\0')
 	{
 		i++;
 	}
-	while (src[j] != '\0' && j < nb)
+	while (str[j] != '\0')
 	{
-		dest[i] = src[j];
-		i++;
+		if (str[j] == to_find[0])
+		{
+			scan = 0;
+			while (scan < i)
+			{
+				count = 0;
+				if (str[j] == str[i])
+				{
+					count++;
+					//j++;
+				}
+				scan++;
+			}
+		}
 		j++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	if (count == i)
+	{
+		print = i - j;
+		while (str[print] != '\0')
+		{
+			str[l]
+			l++;
+			print++;
+		}
+	}
+	str[print] = '\0';
+	return (str);
 }
 
-/*
+
 #include <stdio.h>
 #include <stdlib.h>
 
 int	main(int argc, char *argv[])
 {
-	if (argc != 4)
+	if (argc != 3)
 	{
-		fprintf(stderr, 
-		"Usage: %s <Dest. String> <Src. String> [<Src. Length>]\n", argv[0]);
+		fprintf(stderr, "Usage: %s <str. String> <to_find. String>\n", argv[0]);
 		exit (1);
 	}
 
@@ -51,6 +77,6 @@ int	main(int argc, char *argv[])
 	printf("\n");
 
 	printf("AFTER:\n");
-	printf("%s\n", ft_strncat(argv[1], argv[2], atoi(argv[3])));	
+	printf("%s\n", ft_strstr(argv[1], argv[2]));
+	return (0);	
 }
-*/
