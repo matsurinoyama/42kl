@@ -34,7 +34,8 @@ int	main(int argc, char *argv[])
 {
 	if (argc != 4)
 	{
-		fprintf(stderr, "Usage: %s <Dest. String> <Src. String> [<Length>]\n", argv[0]);
+		fprintf(stderr, 
+		"Usage: %s <Dest. String> <Src. String> [<Src. Length>]\n", argv[0]);
 		exit (1);
 	}
 

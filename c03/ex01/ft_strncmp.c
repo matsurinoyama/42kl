@@ -38,7 +38,8 @@ int	main (int argc, char *argv[])
 
 	if (argc != 4)
 	{
-		fprintf(stderr, "Usage: %s <String 1> <String 2> [<Length>]\n", argv[0]);
+		fprintf(stderr, 
+		"Usage: %s <String 1> <String 2> [<Compared Length>]\n", argv[0]);
 		exit (1);
 	}
 
