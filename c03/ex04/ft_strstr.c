@@ -12,55 +12,38 @@
 
 #include <unistd.h>
 
-char	*ft_strstr(char *str, char *to_find)
+int	ft_compare(char *str, char *to_find)
 {
-	int	i;
-	int	j;
-	int l;
-	int	scan;
-	int count;
-	int	print;
-
-	i = 0;
-	j = 0;
-	l = 0;
-	while (to_find[i] != '\0')
+	while (*str && *to_find)
 	{
-		i++;
-	}
-	while (str[j] != '\0')
-	{
-		if (str[j] == to_find[0])
+		if (*str != *to_find)
 		{
-			scan = 0;
-			while (scan < i)
-			{
-				count = 0;
-				if (str[j] == str[i])
-				{
-					count++;
-					//j++;
-				}
-				scan++;
-			}
+			return (0);
 		}
-		j++;
+		str++;
+		to_find++;
 	}
-	if (count == i)
-	{
-		print = i - j;
-		while (str[print] != '\0')
-		{
-			str[l]
-			l++;
-			print++;
-		}
-	}
-	str[print] = '\0';
-	return (str);
+	return (*to_find == '\0');
 }
 
+char	*ft_strstr(char *str, char *to_find)
+{
+	if (*to_find == '\0')
+	{
+		return (str);
+	}
+	while (*str != '\0')
+	{
+		if ((*str == *to_find) && ft_compare(str, to_find))
+		{
+			return (str);
+		}
+		str++;
+	}
+	return (0);
+}
 
+/*
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -80,3 +63,4 @@ int	main(int argc, char *argv[])
 	printf("%s\n", ft_strstr(argv[1], argv[2]));
 	return (0);	
 }
+*/

@@ -23,19 +23,14 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	{
 		result++;
 	}
-	if (size < 1)
+	if (size > 0)
 	{
-		return (result);
-	}
-	while (src[i] && i < size - 1)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	while (i < size)
-	{
+		while (src[i] && i < size - 1)
+		{
+			dest[i] = src[i];
+			i++;
+		}
 		dest[i] = '\0';
-		i++;
 	}
 	return (result);
 }
