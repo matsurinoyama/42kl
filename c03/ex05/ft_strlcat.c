@@ -12,20 +12,28 @@
 
 #include <unistd.h>
 
-char	*ft_strlcat(char *dest, char *src, unsigned int size)
+unsigned int	ft_strsize(char *str)
+{
+	unsigned int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
+
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
 	unsigned int	i;
 	unsigned int	j;
 
-	i = 0;
+	i = ft_strsize(dest);
 	j = 0;
-	while (dest[i] != '\0')
-	{
-		i++;
-	}
 	if (size > i)
 	{
-		while (src[j] != '\0' && j < size)
+		while (src[j] != '\0' && j < size - 1)
 		{
 			dest[i] = src[j];
 			i++;
@@ -33,7 +41,14 @@ char	*ft_strlcat(char *dest, char *src, unsigned int size)
 		}
 	}
 	dest[i] = '\0';
-	return (dest);
+	if (size < ft_strsize(dest))
+	{
+		return (ft_strsize(src) + size);
+	}
+	else
+	{
+		return (ft_strsize(dest) + ft_strsize(src));
+	}
 }
 
 /*
@@ -54,6 +69,8 @@ int	main(int argc, char *argv[])
 	printf("\n");
 
 	printf("AFTER:\n");
-	printf("%s\n", ft_strlcat(argv[1], argv[2], atoi(argv[3])));	
+	printf("(%d) ", ft_strlcat(argv[1], argv[2], atoi (argv[3])));
+	printf("%s\n", argv[1]);	
+
 }
 */
