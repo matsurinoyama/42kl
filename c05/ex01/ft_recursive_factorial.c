@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbin-fad <mbin-fad@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 12:07:41 by mbin-fad          #+#    #+#             */
-/*   Updated: 2023/02/23 12:07:43 by mbin-fad         ###   ########.fr       */
+/*   Updated: 2023/02/28 16:11:49 by mbin-fad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iterative_factorial(int nb)
+int	ft_recursive_factorial(int nb)
 {
 	int	i;
 	int	result;
@@ -21,12 +21,14 @@ int	ft_iterative_factorial(int nb)
 	{
 		return (0);
 	}
-	while (i >= 1)
+	else if (nb == 0)
 	{
-		result *= i;
-		i--;
+		return (1);
 	}
-	return (result);
+	else
+	{
+		return (nb * ft_recursive_factorial(nb - 1));
+	}
 }
 
 /*
@@ -43,6 +45,6 @@ int	main (int argc, char *argv[])
 	}
 
 	printf("FACTORIAL OF %s IS: ", argv[1]);
-	printf("%d\n", ft_iterative_factorial(atoi(argv[1])));
+	printf("%d\n", ft_recursive_factorial(atoi(argv[1])));
 }
 */

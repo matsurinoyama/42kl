@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbin-fad <mbin-fad@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 12:07:41 by mbin-fad          #+#    #+#             */
-/*   Updated: 2023/02/23 12:07:43 by mbin-fad         ###   ########.fr       */
+/*   Updated: 2023/02/28 17:03:40 by mbin-fad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iterative_factorial(int nb)
+int	ft_fibonacci(int index)
 {
-	int	i;
-	int	result;
-
-	i = nb;
-	result = 1;
-	if (nb < 0)
+	if (index < 0)
+	{
+		return (-1);
+	}
+	else if (index == 0)
 	{
 		return (0);
 	}
-	while (i >= 1)
+	else if (index == 1)
 	{
-		result *= i;
-		i--;
+		return (1);
 	}
-	return (result);
+	else
+	{
+		return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
+	}
 }
 
 /*
@@ -38,11 +39,11 @@ int	main (int argc, char *argv[])
 	if (argc != 2)
 	{
 		fprintf(stderr, 
-		"Usage: %s <Number>\n", argv[0]);
+		"Usage: %s <Index Number>\n", argv[0]);
 		exit (1);
 	}
 
-	printf("FACTORIAL OF %s IS: ", argv[1]);
-	printf("%d\n", ft_iterative_factorial(atoi(argv[1])));
+	printf("%sTH NUMBER OF THE FIBONACCI SEQUENCE IS OF: ", argv[1]);
+	printf("%d\n", ft_fibonacci(atoi(argv[1])));
 }
 */
