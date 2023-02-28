@@ -1,32 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_is_prime.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbin-fad <mbin-fad@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 12:07:41 by mbin-fad          #+#    #+#             */
-/*   Updated: 2023/02/23 12:07:43 by mbin-fad         ###   ########.fr       */
+/*   Updated: 2023/02/28 19:09:14 by mbin-fad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iterative_factorial(int nb)
+int	ft_is_prime(int nb)
 {
 	int	i;
 	int	result;
+	int	count;
 
-	i = nb;
-	result = 1;
-	if (nb < 0)
+	i = 1;
+	count = 0;
+	while (i <= nb)
+	{
+		result = nb % i;
+		if (result == 0)
+		{
+			count++;
+		}
+		i++;
+	}
+	if (count == 2)
+	{
+		return (1);
+	}
+	else
 	{
 		return (0);
 	}
-	while (i >= 1)
-	{
-		result *= i;
-		i--;
-	}
-	return (result);
 }
 
 /*
@@ -42,7 +50,14 @@ int	main (int argc, char *argv[])
 		exit (1);
 	}
 
-	printf("FACTORIAL OF %s IS: ", argv[1]);
-	printf("%d\n", ft_iterative_factorial(atoi(argv[1])));
+	printf("IS %s A PRIME NUMBER?: ", argv[1]);
+	if (ft_is_prime(atoi(argv[1])) == 1)
+	{
+		printf("YES (%d)\n", ft_is_prime(atoi(argv[1])));
+	}
+	else
+	{
+		printf("NO (%d)\n", ft_is_prime(atoi(argv[1])));
+	}
 }
 */

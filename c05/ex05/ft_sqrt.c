@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbin-fad <mbin-fad@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 12:07:41 by mbin-fad          #+#    #+#             */
-/*   Updated: 2023/02/23 12:07:43 by mbin-fad         ###   ########.fr       */
+/*   Updated: 2023/02/28 17:30:59 by mbin-fad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iterative_factorial(int nb)
+int	ft_sqrt(int nb)
 {
 	int	i;
-	int	result;
 
-	i = nb;
-	result = 1;
-	if (nb < 0)
+	i = 1;
+	while (i * i <= nb)
 	{
-		return (0);
+		if (i * i == nb)
+		{
+			return (i);
+		}
+		i++;
 	}
-	while (i >= 1)
-	{
-		result *= i;
-		i--;
-	}
-	return (result);
+	return (0);
 }
 
 /*
@@ -42,7 +39,7 @@ int	main (int argc, char *argv[])
 		exit (1);
 	}
 
-	printf("FACTORIAL OF %s IS: ", argv[1]);
-	printf("%d\n", ft_iterative_factorial(atoi(argv[1])));
+	printf("THE SQUARE ROOT OF %s IS: ", argv[1]);
+	printf("%d\n", ft_sqrt(atoi(argv[1])));
 }
 */
