@@ -10,4 +10,4 @@
 + ex07: OK
 - ex08: KO
 ```
-**Final Score: 60/100**
+Final Score: **60/100 (PASS)**

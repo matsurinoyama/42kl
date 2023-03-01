@@ -10,4 +10,4 @@
 + ex07: OK
 + ex08: OK
 ```
-**Final Score: 50/100**
+Final Score: **50/100 (PASS)**

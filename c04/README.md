@@ -7,4 +7,4 @@
 - ex04: EMPTY
 - ex05: EMPTY
 ```
-**Final Score: 50/100**
+Final Score: **50/100 (PASS)**

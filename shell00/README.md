@@ -11,4 +11,4 @@
 - ex08: KO
 - ex09: KO
 ```
-**Final Score: 0/100**
+Final Score: **0/100 (FAIL)**
