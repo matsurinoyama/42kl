@@ -24,5 +24,10 @@ void	ft_putstr(char *str)
 
 int	main(int argc, char *argv[])
 {
-	ft_putstr(argv[0]);
+	if (argc == 1)
+	{
+		ft_putstr(argv[0]);
+		return (1);
+	}
+	return (0);
 }
