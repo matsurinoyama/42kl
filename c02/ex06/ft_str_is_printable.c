@@ -19,12 +19,9 @@ int	ft_str_is_printable(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] != ' ')
+		if (str[i] < '!' || str[i] > '~')
 		{
-			if (str[i] < '!' || str[i] > '~')
-			{
-				return (0);
-			}
+			return (0);
 		}
 		i++;
 	}
