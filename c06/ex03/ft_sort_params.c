@@ -38,29 +38,22 @@ int	ft_strcmp(char *s1, char *s2)
 	return (s1[i] - s2[i]);
 }
 
-void	ft_swap(char **a, char **b)
+void	ft_sort(char **arr, int size)
 {
-	char	*swap;
+	int		i;
+	int		j;
+	char	*tmp;
 
-	swap = *a;
-	*a = *b;
-	*b = swap;
-}
-
-void	ft_bubble_sort(char **arr, int n)
-{
-	int	i;
-	int	j;
-
-	i = 0;
-	while (i < n - 1)
+	i = 1;
+	while (i < size)
 	{
-		j = 0;
-		while (j < n - i - 1)
+		j = i;
+		while (j > 0 && ft_strcmp(arr[j - 1], arr[j]) > 0)
 		{
-			if (ft_strcmp(arr[j], arr[j + 1]) > 0)
-				ft_swap(&arr[j], &arr[j + 1]);
-			j++;
+			tmp = arr[j];
+			arr[j] = arr[j - 1];
+			arr[j - 1] = tmp;
+			j--;
 		}
 		i++;
 	}
@@ -71,7 +64,7 @@ int	main(int argc, char *argv[])
 	int	i;	
 
 	i = 1;
-	ft_bubble_sort(argv + 1, argc - 1);
+	ft_sort(argv + 1, argc - 1);
 	while (i != argc)
 	{
 		ft_putstr(argv[i]);
