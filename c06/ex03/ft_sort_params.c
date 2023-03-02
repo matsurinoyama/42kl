@@ -41,19 +41,17 @@ int	ft_strcmp(char *s1, char *s2)
 void	ft_sort(char **arr, int size)
 {
 	int		i;
-	int		j;
 	char	*tmp;
 
 	i = 1;
 	while (i < size)
 	{
-		j = i;
-		while (j > 0 && ft_strcmp(arr[j - 1], arr[j]) > 0)
+		while (i > 0 && ft_strcmp(arr[i - 1], arr[i]) > 0)
 		{
-			tmp = arr[j];
-			arr[j] = arr[j - 1];
-			arr[j - 1] = tmp;
-			j--;
+			tmp = arr[i];
+			arr[i] = arr[i - 1];
+			arr[i - 1] = tmp;
+			i--;
 		}
 		i++;
 	}
