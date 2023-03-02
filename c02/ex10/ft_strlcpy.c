@@ -31,6 +31,10 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 
 	i = ft_strsize(dest);
 	j = 0;
+	if (!dest || !src)
+	{
+		return (ft_strsize(src));
+	}
 	if (size > i)
 	{
 		while (src[j] && j < (size - 1))
