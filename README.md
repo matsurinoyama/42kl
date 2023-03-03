@@ -1,3 +1,3 @@
 ## 42KL Research & Working Files
-- Current status: **PISCINE ONGOING**
-- Currently working on: `FINAL EXAM 😱` 
+- Current status: **PISCINE ENDED**
+- Currently working on: `🍃` 
